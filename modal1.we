@@ -1,0 +1,84 @@
+<template>
+  <div>
+    <image style="width:800;height:1200" src="{{Imgurl}}"></image>
+    <div id="dialog" class="dialog" if={{ifshow}}>
+      <div class="dialog-backdrop"></div>
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <text class="dialog-title">{{dialogTitle}}</text>
+          <text class="close" onclick="showdialog">×</text>
+        </div>
+        <div class="dialog-body">
+            <text class="random_player">玩家{{randomPlayerId}}</text>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+.dialog-backdrop {
+  opacity: .7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+.dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.dialog-content {
+  width: 450;
+  background-color: transparent;
+  position: relative;
+}
+.dialog-header {
+  padding: 20;
+  position: relative;
+}
+.dialog-title{
+  font-size:35;
+   text-align:center;
+  color:yellow;
+}
+
+.random_player{
+  font-size:45;
+  text-align:center;
+  color:yellow;
+}
+.dialog-body {
+  padding: 20;
+}
+.close {
+  font-size: 50;
+  color:yellow;
+  position: absolute;
+  right: 10;
+  top: 10;
+}
+</style>
+
+<script>
+  module.exports = {
+    data: {
+      ifshow: true,
+      dialogTitle: '你的决斗对象是:',
+      randomPlayerId: parseInt(Math.random()*14),
+      Imgurl:'https://13111211.github.io/weexCompetition/imgs/background/bg3.jpg'
+    },
+    methods: {
+      showdialog: function(){
+        this.ifshow=false;
+      }
+    }
+  }
+</script>
