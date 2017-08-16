@@ -18,7 +18,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 	weex init first-weex-project
 	
 命令行里出现如下结果：
-![](/Users/hellen/Desktop/test.png)
+![](https://github.com/DangDangHellen/weex1/blob/master/test.png)
 
 
 
@@ -30,7 +30,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 
 
 进入到first-weex-project目录下，weex-toolkit已经为我们生成了标准项目结构，目录列表如下：
-![](/Users/hellen/Desktop/test1.png)
+![](https://github.com/DangDangHellen/weex1/blob/master/test1.png)
 
 ### 开发
 在package.json中已经配置好了几个常用的npm脚本，分别是：
@@ -43,7 +43,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
   }
   
 首先来通过npm install安装项目依赖。之后运行npm run dev 和 npm run serve开启 watch模式和静态服务器。然后打开浏览器，进入http://localhost:8080/index.html 即可看到Weex H5页面。
-![](/Users/hellen/Desktop/result.png)
+![](https://github.com/DangDangHellen/weex1/blob/master/result.png)
 
 
 
@@ -57,7 +57,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 
 
 主要是分成三个部分来写的。`<template> </template>`是HTML模版，用来写HTML结构；`<style></style>`用来写样式；`<script></script>`用来写脚本。这里的语法跟Vue语法是相同的。了解过Vue的应该都知道，页面是由数据来渲染的，所以script标签中主要是数据的定义，以及方法的定义。如果HTML中要引用数据，必须用{{}}来括起来；而如果定义元素属性，则不需要{{}}。看下初始化项目中foo.vue的代码：
-![Foo.png](/Users/hellen/Desktop/Foo.png)
+![Foo.png](https://github.com/DangDangHellen/weex1/blob/master/Foo.png)
 
 
 ## 自定义组件
@@ -68,8 +68,8 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 所以ChildFoo里的代码与Foo唯一的不同在于 data的不同。
 
 既然把页面显示的内容已经封装到组件ChildFoo里面了，Foo中必然不需要之前的那些代码了，那么Foo如何去引用我们的自定义组件ChildFoo呢？这里用过import ChildFoo from './components/ChildFoo.vue'来引入，注意：***一定要加后缀.vue，不然会报错***。同时在export default{ }中加入一个components项，其对应一个对象，这里面要写你要导出的组件。所以新的foo和ChildFoo代码是这样的：
-![修改版Foo](/Users/hellen/Desktop/fooVue.png)
-![ChildFoo代码](/Users/hellen/Desktop/ChildFoo.png)
+![修改版Foo](https://github.com/DangDangHellen/weex1/blob/master/fooVue.png)
+![ChildFoo代码](https://github.com/DangDangHellen/weex1/blob/master/ChildFoo.png)
 
 
 这时候，npm run serve一下，就可以看到展示了两个相同的部分。
@@ -96,7 +96,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 	v-on:onClick="handleClick($event)"
 handleClick就是自定义的事件处理函数，其中$event是事件对象，包含了从子组件传过来的对象参数。
 最终得到下面的效果：
-![](/Users/hellen/Desktop/Weex.png)
+![](https://github.com/DangDangHellen/weex1/blob/master/Weex.png)
 
 最后，说一说如何在移动端看页面效果。手机下载PlayGround，[下载地址](http://weex.apache.org/cn/playground.html)，利用playground扫码就可以了。
 
