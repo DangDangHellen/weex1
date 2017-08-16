@@ -73,7 +73,7 @@ Weex是一套简单易用的跨平台开发方案，能以web的开发体验构�
 
 
 这时候，npm run serve一下，就可以看到展示了两个相同的部分。
-![添加组件后](/Users/hellen/Desktop/result1.png)
+![添加组件后](https://github.com/DangDangHellen/weex1/blob/master/result1.png)
 
 ### 组件间通信
 
